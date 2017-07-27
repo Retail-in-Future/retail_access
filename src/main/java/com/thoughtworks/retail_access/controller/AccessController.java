@@ -1,0 +1,19 @@
+package com.thoughtworks.retail_access.controller;
+
+import com.thoughtworks.retail_access.agent.MiddlewareAgent;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class AccessController {
+
+    @Autowired
+    private MiddlewareAgent middlewareAgent;
+
+    @RequestMapping(value = "/access", method = RequestMethod.POST)
+    public String access() {
+        return middlewareAgent.access("");
+    }
+}
