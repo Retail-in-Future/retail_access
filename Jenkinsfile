@@ -7,9 +7,9 @@ pipeline {
                 sh 'scripts/jenkins/build.sh'
             }
         }
-        stage('Run') {
+        stage('Assemble') {
             steps {
-                sh 'scripts/jenkins/run.sh'
+                sh 'scripts/jenkins/assemble.sh'
             }
         }
     }
