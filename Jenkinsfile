@@ -7,5 +7,10 @@ pipeline {
                 sh 'scripts/jenkins/build.sh'
             }
         }
+        stage('Run') {
+            steps {
+                sh 'scripts/jenkins/run.sh'
+            }
+        }
     }
 }
