@@ -21,5 +21,6 @@ public class AccessController {
     @RequestMapping(value = "/access", method = RequestMethod.POST)
     public String access(@RequestParam("is_permitted") Boolean isPermitted) {
         return middlewareAgent.access(deviceName, new AccessDevice(isPermitted).buildValueObject());
+//        return new AccessDevice(isPermitted).toString();
     }
 }

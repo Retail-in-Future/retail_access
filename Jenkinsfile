@@ -12,5 +12,10 @@ pipeline {
                 sh 'scripts/jenkins/assemble.sh'
             }
         }
+        stage("Push") {
+            steps {
+                sh 'scripts/jenkins/push.sh'
+            }
+        }
     }
 }
